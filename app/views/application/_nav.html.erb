@@ -1,0 +1,22 @@
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="https://github.com/w-zengtao" target="_blank">Me</a>
+    </div>
+    <div class="collapse navbar-collapse" >
+      <ul class="nav navbar-nav navbar-left">
+
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to current_user.name, '#' %>
+          </li>
+          <li>
+            <%= link_to '退出', destroy_user_session_path, method: :delete %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
