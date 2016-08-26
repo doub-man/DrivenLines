@@ -10,10 +10,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160825135219) do
+ActiveRecord::Schema.define(version: 20160826065005) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "lines", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "nation_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["nation_id"], name: "index_lines_on_nation_id", using: :btree
+  end
+
+  create_table "nodes", force: :cascade do |t|
+    t.integer  "line_id"
+    t.string   "avatar"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["line_id"], name: "index_nodes_on_line_id", using: :btree
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

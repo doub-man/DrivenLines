@@ -2,6 +2,9 @@ source 'https://rubygems.org'
 
 gem 'rails', '~> 5.0.0'
 gem 'pg', '~> 0.18'
+gem 'rgeo'
+gem 'activerecord-postgis-adapter'
+
 gem 'puma', '~> 3.0'
 gem 'bootstrap-sass'
 gem 'sass-rails', '~> 5.0'
@@ -13,6 +16,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Redis
 gem 'redis', '~> 3.0'
+gem 'redis-rails'
 gem 'redis-namespace'
 
 # Sidekiq
@@ -21,6 +25,12 @@ gem 'sidekiq'
 # ElasticSearch
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
+
+# Static Resource
+gem 'mini_magick'
+gem 'qiniu-rs'
+gem 'carrierwave'
+gem 'carrierwave-qiniu', git: 'https://github.com/huobazi/carrierwave-qiniu'
 
 # Devise
 gem 'devise'
