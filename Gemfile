@@ -45,6 +45,7 @@ group :development, :test do
   gem 'awesome_print'
   gem 'better_errors'
   gem 'pry'
+  gem 'rb-readline'
 end
 
 group :development do
